@@ -1,4 +1,4 @@
-curl -o download.sh -SL https://bit.ly/43TNdnz
+curl -o install.sh -SL https://bit.ly/3CPCYVl
 #curl -o time.sh -SL https://bit.ly/3B6BGEw
 curl -o wine.sh -SL https://bit.ly/3NT0gjI
 
