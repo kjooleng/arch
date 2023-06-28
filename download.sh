@@ -1,10 +1,10 @@
-curl -o install.sh -SL https://bit.ly/3pbrg4o
+curl -o download.sh -SL https://bit.ly/43TNdnz
 #curl -o time.sh -SL https://bit.ly/3B6BGEw
-curl -o wine.sh -SL https://bit.ly/3Cyav6l
+curl -o wine.sh -SL https://bit.ly/3NT0gjI
 
-curl -o locale.gen -SL https://bit.ly/3J6uaxO
-curl -o pacman.conf -SL https://bit.ly/3qHXxAd
-curl -o sudoers -SL https://bit.ly/43yur56
+curl -o locale.gen -SL https://bit.ly/46unILs
+curl -o pacman.conf -SL https://bit.ly/3JBq4yh
+curl -o sudoers -SL https://bit.ly/3JAFIKc
 
 nano install.sh
 
