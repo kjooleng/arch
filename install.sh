@@ -267,8 +267,8 @@ echo "/swapfile none swap defaults 0 0" >> /mnt/etc/fstab
 
 # copy some config files to /mnt
 cp pacman.conf /mnt/etc/pacman.conf
-cp locale.gen /mnt/etc/locale.gen
-cp sudoers /mnt/etc/sudoers
+#cp locale.gen /mnt/etc/locale.gen
+#cp sudoers /mnt/etc/sudoers
 
 #cp time.sh /mnt
 cp wine.sh /mnt
@@ -284,7 +284,7 @@ arch-chroot /mnt hwclock --systohc
 # nano /etc/locale.gen
 
 # Uncomment # to include chinese for locale generation
-#sudo sed -i 's/^# *\(zh_\)/\1/' /mnt/etc/locale.gen
+sudo sed -i 's/^# *\(zh_\)/\1/' /mnt/etc/locale.gen
 
 arch-chroot /mnt locale-gen
 echo LANG=en_US.UTF-8 > /mnt/etc/locale.conf
@@ -384,7 +384,7 @@ echo "$USERNAME:$NEW_PASSWORD" | arch-chroot /mnt chpasswd  #chpasswd takes the 
 arch-chroot /mnt usermod -a -G wheel ${USERNAME}
 #nano /mnt/etc/sudoers
 #sudo sed -i 's/^# *\(%wheel ALL=(ALL:ALL) ALL\)/\1/' /mnt/etc/sudoers
-#sudo sed -i 's/^# *\(%wheel ALL=(ALL:ALL) ALL\)/\1/' /mnt/etc/sudoers
+sudo sed -i 's/^# *\(%wheel ALL=(ALL:ALL) ALL\)/\1/' /mnt/etc/sudoers
 
 # To update System
 arch-chroot /mnt pacman -Syyu
