@@ -29,10 +29,10 @@ winetricks corefonts dotnet40 cjkfonts
 #sudo pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts adobe-source-han-sans-hk-fonts --noconfirm
 
 # install trinity desktop
-sudo pacman -S tde-tdebase --noconfirm
+#sudo pacman -S tde-tdebase --noconfirm
 
 # install enlightenment desktop
-sudo pacman -S enlightenment --noconfirm
+#sudo pacman -S enlightenment --noconfirm
 
 # other customisation
 sudo pacman -S chaotic-aur/yay --noconfirm
@@ -48,18 +48,18 @@ sudo pacman -S chaotic-aur/pamac-aur --noconfirm
 
 #no need for running vm
 
-#sudo pacman -S chaotic-aur/dropbox --noconfirm
-#rm -rf ~/.dropbox-dist
-#install -dm0 ~/.dropbox-dist
-#sudo pacman -S chaotic-aur/youtubedl-gui --noconfirm
+sudo pacman -S chaotic-aur/dropbox --noconfirm
+rm -rf ~/.dropbox-dist
+install -dm0 ~/.dropbox-dist
+sudo pacman -S chaotic-aur/youtubedl-gui --noconfirm
 #sudo pacman -S chaotic-aur/youplay --noconfirm
 #sudo pacman -S chaotic-aur/spotify --noconfirm
-#sudo pacman -S chaotic-aur/video-downloader --noconfirm
-#sudo pacman -S chaotic-aur/xorgxrdp --noconfirm
-#sudo pacman -S chaotic-aur/authy --noconfirm
-#sudo pacman -S bitwarden --noconfirm
-#sudo pacman -S clipgrab --noconfirm
-#sudo pacman -S reflector rsync curl --noconfirm
+sudo pacman -S chaotic-aur/video-downloader --noconfirm
+sudo pacman -S chaotic-aur/xorgxrdp --noconfirm
+sudo pacman -S chaotic-aur/authy --noconfirm
+sudo pacman -S bitwarden --noconfirm
+sudo pacman -S clipgrab --noconfirm
+sudo pacman -S reflector rsync curl --noconfirm
 
 #Install pamac from AUR
 #curl -o pamac-all.zip -SL https://bit.ly/432WEQH
