@@ -100,4 +100,4 @@ yay -S slimbookbattery --noconfirm
 
 
 
-sudo reboot
+sudo shutdown now
