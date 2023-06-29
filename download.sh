@@ -3,7 +3,7 @@ curl -o install.sh -SL https://bit.ly/42Z4SsR
 curl -o wine.sh -SL https://bit.ly/3XrNsnz
 
 curl -o locale.gen -SL https://bit.ly/46unILs
-curl -o pacman.conf -SL https://bit.ly/3JBq4yh
+curl -o pacman.conf -SL https://bit.ly/44iJTCR
 curl -o sudoers -SL https://bit.ly/3JAFIKc
 
 nano install.sh
