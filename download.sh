@@ -1,3 +1,4 @@
+#!/bin/bash
 curl -o install.sh -SL https://bit.ly/42Z4SsR
 #curl -o time.sh -SL https://bit.ly/3B6BGEw
 curl -o wine.sh -SL https://bit.ly/3XrNsnz
