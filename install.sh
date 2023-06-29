@@ -1,4 +1,6 @@
 #!/bin/bash
+
+#
 # KJL install of Arch Linux (BIOS or UEFI install)
 # 
 # Based on https://www.linuxfordevices.com/tutorials/linux/how-to-install-arch-linux and
