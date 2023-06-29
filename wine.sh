@@ -12,10 +12,10 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.ta
 sudo pacman-key --recv-key  D6D6FAA25E9A3E4ECD9FBDBEC93AF1698685AD8B
 sudo pacman-key --lsign-key D6D6FAA25E9A3E4ECD9FBDBEC93AF1698685AD8B
 
-#sudo nano /etc/pacman.conf
+sudo nano /etc/pacman.conf
 # Uncomment for chaotic and trinity repo
-sudo sed -i 's/^# *\(chaotic\)/\1/' /etc/pacman.conf
-sudo sed -i 's/^# *\(trinity\)/\1/' /etc/pacman.conf
+#sudo sed -i 's/^# *\(chaotic\)/\1/' /etc/pacman.conf
+#sudo sed -i 's/^# *\(trinity\)/\1/' /etc/pacman.conf
 
 sudo pacman -Syu
 
