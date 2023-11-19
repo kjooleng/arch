@@ -44,6 +44,7 @@ sudo pacman -S chaotic-aur/librewolf --noconfirm
 sudo pacman -S chaotic-aur/icecat --noconfirm
 sudo pacman -S chaotic-aur/google-chrome --noconfirm
 sudo pacman -S chaotic-aur/mercury-browser-avx-bin --noconfirm
+sudo pacman -S chaotic-aur/waterfox-bin --noconfirm
 trizen -S appimagelauncher --noconfirm
 sudo pacman -S chaotic-aur/pamac-aur --noconfirm
 
