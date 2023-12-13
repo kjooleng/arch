@@ -14,5 +14,8 @@ sudo pacman -S lib32-pipewire pipewire-pulse lib32-libpulse lib32-gnutls --nocon
 # chinese fonts
 sudo pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts adobe-source-han-sans-hk-fonts --noconfirm
 
+# install IME and other misc
+sudo pacman -S fcitx5-im fcitx5-chinese-addons --noconfirm
+
 # other apps
 sudo pacman -S vlc filezilla openvpn networkmanager-openvpn x11vnc parcellite --noconfirm
