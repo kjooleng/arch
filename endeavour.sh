@@ -32,3 +32,39 @@ Include = /etc/pacman.d/chaotic-mirrorlist
 EOF
 
 sudo pacman -Syu
+
+winetricks corefonts dotnet40 cjkfonts
+
+# other customisation
+sudo pacman -S chaotic-aur/trizen --noconfirm
+sudo pacman -S chaotic-aur/p7zip-gui --noconfirm
+sudo pacman -S chaotic-aur/anydesk --noconfirm
+sudo pacman -S chaotic-aur/firedragon --noconfirm
+sudo pacman -S chaotic-aur/librewolf --noconfirm
+sudo pacman -S chaotic-aur/icecat --noconfirm
+sudo pacman -S chaotic-aur/google-chrome --noconfirm
+sudo pacman -S chaotic-aur/mercury-browser-avx-bin --noconfirm
+sudo pacman -S chaotic-aur/waterfox-bin --noconfirm
+trizen -S appimagelauncher --noconfirm
+sudo pacman -S chaotic-aur/pamac-aur --noconfirm
+
+#no need for running vm
+sudo pacman -S chaotic-aur/dropbox --noconfirm
+rm -rf ~/.dropbox-dist
+install -dm0 ~/.dropbox-dist
+sudo pacman -S chaotic-aur/youtubedl-gui --noconfirm
+#sudo pacman -S chaotic-aur/youplay --noconfirm
+#sudo pacman -S chaotic-aur/spotify --noconfirm
+sudo pacman -S chaotic-aur/video-downloader --noconfirm
+sudo pacman -S chaotic-aur/xorgxrdp --noconfirm
+sudo pacman -S chaotic-aur/authy --noconfirm
+sudo pacman -S bitwarden --noconfirm
+sudo pacman -S clipgrab --noconfirm
+
+# tlp install
+sudo pacman -S tlp tlp-rdw --noconfirm
+sudo systemctl enable tlp.service
+sudo systemctl enable NetworkManager-dispatcher.service
+sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
+
+yay -S slimbookbattery --noconfirm
