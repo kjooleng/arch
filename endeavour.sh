@@ -33,7 +33,8 @@ EOF
 
 sudo pacman -Syu
 
-winetricks corefonts dotnet40 cjkfonts
+winetricks corefonts --noconfirm
+winetricks dotnet40 cjkfonts --noconfirm
 
 # other customisation
 sudo pacman -S chaotic-aur/trizen --noconfirm
