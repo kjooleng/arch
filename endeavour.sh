@@ -25,6 +25,8 @@ sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key 3056513887B78AEB
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'  --noconfirm
 
+su
+
 # configure pacman.conf
 sudo cat <<EOF >> /etc/pacman.conf
 [chaotic-aur]
@@ -32,6 +34,8 @@ Include = /etc/pacman.d/chaotic-mirrorlist
 EOF
 
 sudo pacman -Syu
+
+exit
 
 winetricks corefonts --noconfirm
 winetricks dotnet40 cjkfonts --noconfirm
@@ -69,3 +73,5 @@ sudo systemctl enable NetworkManager-dispatcher.service
 sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 
 yay -S slimbookbattery --noconfirm
+
+
