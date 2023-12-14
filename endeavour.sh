@@ -74,4 +74,21 @@ sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 
 yay -S slimbookbattery --noconfirm
 
+# set swap size
+echo Enter desired swap file size in MiB
+read swap
 
+su
+
+# swap file creation
+dd if=/dev/zero of=/swapfile bs=1M count=$swap status=progress
+chmod 600 /swapfile
+mkswap -U clear /swapfile
+swapon /swapfile
+
+# configure swap
+cat <<EOF >> /etc/fstab
+/swapfile none swap defaults 0 0
+EOF
+
+exit
