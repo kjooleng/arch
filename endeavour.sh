@@ -92,8 +92,11 @@ mkswap -U clear /swapfile
 swapon /swapfile
 
 # configure swap
-cat <<EOF >> /etc/fstab
-/swapfile none swap defaults 0 0
-EOF
+#cat <<EOF >> /etc/fstab
+#/swapfile none swap defaults 0 0
+#EOF
+
+echo "/swapfile none swap defaults 0 0" >> /etc/fstab
+
 
 #exit
