@@ -21,7 +21,7 @@ sudo pacman -S fcitx5-im fcitx5-chinese-addons --noconfirm
 
 # other apps
 sudo pacman -S vlc filezilla openvpn networkmanager-openvpn x11vnc parcellite --noconfirm
-sudo pacman -S fuseiso nemo filemanager-actions cdrtools alacarte  --noconfirm;;
+sudo pacman -S fuseiso nemo filemanager-actions cdrtools alacarte  --noconfirm
 
 #Chaotic-AUR
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
