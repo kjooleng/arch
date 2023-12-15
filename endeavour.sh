@@ -4,7 +4,6 @@
 sudo sed -i 's/^# *\(zh_\)/\1/' /etc/locale.gen
 
 sudo locale-gen
-sleep 10
 
 # install wine
 sudo pacman -S wine wine-mono wine-gecko winetricks --noconfirm
@@ -29,7 +28,7 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.ta
 su
 
 # configure pacman.conf
-sudo cat <<EOF >> /etc/pacman.conf
+cat <<EOF >> /etc/pacman.conf
 [chaotic-aur]
 Include = /etc/pacman.d/chaotic-mirrorlist
 EOF
@@ -75,11 +74,11 @@ sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 
 yay -S slimbookbattery --noconfirm
 
+su
+
 # set swap size
 echo Enter desired swap file size in MiB
 read swap
-
-su
 
 # swap file creation
 dd if=/dev/zero of=/swapfile bs=1M count=$swap status=progress
