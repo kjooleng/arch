@@ -4,6 +4,7 @@
 sudo sed -i 's/^# *\(zh_\)/\1/' /etc/locale.gen
 
 sudo locale-gen
+sleep 10
 
 # install wine
 sudo pacman -S wine wine-mono wine-gecko winetricks --noconfirm
