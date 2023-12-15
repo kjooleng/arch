@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#login as su before running script
+
 # Uncomment # to include chinese for locale generation
 sudo sed -i 's/^# *\(zh_\)/\1/' /etc/locale.gen
 
@@ -25,17 +27,20 @@ sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key 3056513887B78AEB
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'  --noconfirm
 
-su
+#su
 
 # configure pacman.conf
-cat <<EOF >> /etc/pacman.conf
-[chaotic-aur]
-Include = /etc/pacman.d/chaotic-mirrorlist
-EOF
+#cat <<EOF >> /etc/pacman.conf
+#[chaotic-aur]
+#Include = /etc/pacman.d/chaotic-mirrorlist
+#EOF
+
+echo "[chaotic-aur]" >> /etc/pacman.conf
+echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
 
 sudo pacman -Syu
 
-exit
+
 
 winetricks corefonts --noconfirm
 winetricks dotnet40 cjkfonts --noconfirm
@@ -74,7 +79,7 @@ sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 
 yay -S slimbookbattery --noconfirm
 
-su
+#su
 
 # set swap size
 echo Enter desired swap file size in MiB
@@ -91,4 +96,4 @@ cat <<EOF >> /etc/fstab
 /swapfile none swap defaults 0 0
 EOF
 
-exit
+#exit
