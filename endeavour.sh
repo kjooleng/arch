@@ -22,9 +22,10 @@ swapon /swapfile
 echo "/swapfile none swap defaults 0 0" >> /etc/fstab
 
 
-#exit
-
-#su
+#Chaotic-AUR
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+sudo pacman-key --lsign-key 3056513887B78AEB
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'  --noconfirm
 
 # configure pacman.conf
 #cat <<EOF >> /etc/pacman.conf
@@ -58,15 +59,6 @@ sudo pacman -S fcitx5-im fcitx5-chinese-addons --noconfirm
 # other apps
 sudo pacman -S vlc gst-libav filezilla openvpn networkmanager-openvpn x11vnc parcellite --noconfirm
 sudo pacman -S fuseiso nemo filemanager-actions cdrtools alacarte  --noconfirm
-
-#Chaotic-AUR
-sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
-sudo pacman-key --lsign-key 3056513887B78AEB
-sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'  --noconfirm
-
-
-
-
 
 winetricks corefonts --noconfirm
 winetricks dotnet40 cjkfonts --noconfirm
