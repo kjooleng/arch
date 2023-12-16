@@ -32,6 +32,7 @@ echo "/swapfile none swap defaults 0 0" >> /etc/fstab
 #Include = /etc/pacman.d/chaotic-mirrorlist
 #EOF
 
+echo "  " >> /etc/pacman.conf
 echo "[chaotic-aur]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
 
