@@ -2,6 +2,41 @@
 
 #login as su before running script
 
+#su
+
+# set swap size
+echo Enter desired swap file size in MiB
+read swap
+
+# swap file creation
+dd if=/dev/zero of=/swapfile bs=1M count=$swap status=progress
+chmod 600 /swapfile
+mkswap -U clear /swapfile
+swapon /swapfile
+
+# configure swap
+#cat <<EOF >> /etc/fstab
+#/swapfile none swap defaults 0 0
+#EOF
+
+echo "/swapfile none swap defaults 0 0" >> /etc/fstab
+
+
+#exit
+
+#su
+
+# configure pacman.conf
+#cat <<EOF >> /etc/pacman.conf
+#[chaotic-aur]
+#Include = /etc/pacman.d/chaotic-mirrorlist
+#EOF
+
+echo "[chaotic-aur]" >> /etc/pacman.conf
+echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
+
+sudo pacman -Syu
+
 # Uncomment # to include chinese for locale generation
 sudo sed -i 's/^# *\(zh_\)/\1/' /etc/locale.gen
 
@@ -28,18 +63,7 @@ sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key 3056513887B78AEB
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'  --noconfirm
 
-#su
 
-# configure pacman.conf
-#cat <<EOF >> /etc/pacman.conf
-#[chaotic-aur]
-#Include = /etc/pacman.d/chaotic-mirrorlist
-#EOF
-
-echo "[chaotic-aur]" >> /etc/pacman.conf
-echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
-
-sudo pacman -Syu
 
 
 
@@ -80,24 +104,7 @@ sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 
 yay -S slimbookbattery --noconfirm
 
-#su
 
-# set swap size
-echo Enter desired swap file size in MiB
-read swap
-
-# swap file creation
-dd if=/dev/zero of=/swapfile bs=1M count=$swap status=progress
-chmod 600 /swapfile
-mkswap -U clear /swapfile
-swapon /swapfile
-
-# configure swap
-#cat <<EOF >> /etc/fstab
-#/swapfile none swap defaults 0 0
-#EOF
-
-echo "/swapfile none swap defaults 0 0" >> /etc/fstab
 
 
 #exit
