@@ -24,6 +24,7 @@ swapon /swapfile
 #/swapfile none swap defaults 0 0
 #EOF
 
+echo "  " >> /etc/fstab
 echo "/swapfile none swap defaults 0 0" >> /etc/fstab
 
 
