@@ -41,9 +41,10 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.ta
 
 echo "  " >> /etc/pacman.conf
 echo "[chaotic-aur]" >> /etc/pacman.conf
+echo "SigLevel = PackageRequired" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
 
-sudo pacman -Syuyu
+sudo pacman -Syu
 
 # Uncomment # to include chinese for locale generation
 sudo sed -i 's/^# *\(zh_\)/\1/' /etc/locale.gen
