@@ -65,7 +65,10 @@ sudo pacman -S fcitx5-im fcitx5-chinese-addons --noconfirm
 # other apps
 sudo pacman -S vlc gst-libav filezilla openvpn networkmanager-openvpn x11vnc parcellite --noconfirm
 sudo pacman -S fuseiso nemo filemanager-actions cdrtools alacarte  --noconfirm
-systemctl enable vboxservice
+
+#for vm
+#pacman -S virtualbox-guest-utils --noconfirm
+#systemctl enable vboxservice
 
 winetricks corefonts --noconfirm
 winetricks dotnet40 cjkfonts --noconfirm
