@@ -100,6 +100,8 @@ sudo pacman -S chaotic-aur/xorgxrdp --noconfirm
 sudo pacman -S chaotic-aur/authy --noconfirm
 sudo pacman -S bitwarden --noconfirm
 sudo pacman -S clipgrab --noconfirm
+#sudo pacman -S reflector rsync curl --noconfirm
+
 
 # tlp install
 sudo pacman -S tlp tlp-rdw --noconfirm
