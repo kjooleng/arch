@@ -57,7 +57,7 @@ sudo pacman -S wine wine-mono wine-gecko winetricks --noconfirm
 sudo pacman -S lib32-pipewire pipewire-pulse lib32-libpulse lib32-gnutls --noconfirm
 
 # pulseaudio install for wine
-#arch-chroot /mnt pacman -S lib32-libpulse lib32-gnutls --noconfirm
+#sudo pacman -S lib32-libpulse lib32-gnutls --noconfirm
 
 # chinese fonts
 sudo pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts adobe-source-han-sans-hk-fonts --noconfirm
