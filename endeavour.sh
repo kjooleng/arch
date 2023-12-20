@@ -70,6 +70,7 @@ winetricks corefonts --noconfirm
 winetricks dotnet40 cjkfonts --noconfirm
 
 # other customisation
+#sudo pacman -S chaotic-aur/yay --noconfirm
 sudo pacman -S chaotic-aur/trizen --noconfirm
 sudo pacman -S chaotic-aur/p7zip-gui --noconfirm
 sudo pacman -S chaotic-aur/anydesk --noconfirm
