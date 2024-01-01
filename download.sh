@@ -336,7 +336,7 @@ arch-chroot /mnt systemctl enable dhcpcd
 arch-chroot /mnt systemctl start dhcpcd
 
 # set swappiness
-echo "vm.swappiness = 110" > /mnt/etc/sysctl.d/99-swappiness.conf
+#echo "vm.swappiness = 110" > /mnt/etc/sysctl.d/99-swappiness.conf
 
 #Set root password
 #echo 'Set root password' >&2
