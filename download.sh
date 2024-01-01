@@ -59,8 +59,8 @@ clear
 #MEMORY_SIZE=3G
 
 # set swap size
-echo Enter desired swap file size in MiB
-read swap
+#echo Enter desired swap file size in MiB
+#read swap
 
 # set username
 while true; do               
@@ -274,10 +274,10 @@ mount "$ROOT_DEVICE" /mnt
 fi
 
 # swap file creation
-dd if=/dev/zero of=/mnt/swapfile bs=1M count=$swap status=progress
-chmod 600 /mnt/swapfile
-mkswap -U clear /mnt/swapfile
-swapon /mnt/swapfile
+#dd if=/dev/zero of=/mnt/swapfile bs=1M count=$swap status=progress
+#chmod 600 /mnt/swapfile
+#mkswap -U clear /mnt/swapfile
+#swapon /mnt/swapfile
 #echo "/swapfile none swap defaults 0 0" >> /mnt/etc/fstab
 #echo "vm.swappiness = 110" > /mnt/etc/sysctl.d/99-swappiness.conf
 
@@ -291,7 +291,7 @@ pacstrap /mnt base base-devel linux linux-headers linux-firmware nano dhcpcd
 
 # Generate an fstab config
 genfstab -U /mnt >>/mnt/etc/fstab
-echo "/swapfile none swap defaults 0 0" >> /mnt/etc/fstab
+#echo "/swapfile none swap defaults 0 0" >> /mnt/etc/fstab
 
 # copy some config files to /mnt
 cp pacman.conf /mnt/etc/pacman.conf
