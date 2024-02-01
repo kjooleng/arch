@@ -102,6 +102,10 @@ sudo pacman -S bitwarden --noconfirm
 sudo pacman -S clipgrab --noconfirm
 sudo pacman -S reflector rsync curl --noconfirm
 
+#install firewall
+yay -S firewalld --noconfirm
+sudo systemctl enable firewalld
+sudo systemctl start firewalld
 
 # tlp install
 sudo pacman -S tlp tlp-rdw --noconfirm
