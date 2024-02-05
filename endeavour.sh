@@ -108,7 +108,7 @@ sudo pacman -S clipgrab --noconfirm
 
 
 # tlp install
-sudo pacman -S tlp tlp-rdw --noconfirm
+sudo pacman -S tlp tlp-rdw 
 sudo systemctl enable tlp.service
 sudo systemctl enable NetworkManager-dispatcher.service
 sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
