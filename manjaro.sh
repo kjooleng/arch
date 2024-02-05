@@ -86,6 +86,7 @@ sudo pacman -Syu chaotic-aur/anydesk --noconfirm
 sudo pacman -Syu chaotic-aur/firedragon --noconfirm
 sudo pacman -Syu chaotic-aur/librewolf --noconfirm
 sudo pacman -Syu chaotic-aur/icecat --noconfirm
+sudo pacman -Syu chaotic-aur/floorp --noconfirm
 sudo pacman -Syu chaotic-aur/google-chrome --noconfirm
 sudo pacman -Syu chaotic-aur/mercury-browser-avx-bin --noconfirm
 sudo pacman -Syu chaotic-aur/waterfox-bin --noconfirm
@@ -109,7 +110,7 @@ sudo pacman -Syu clipgrab --noconfirm
 
 
 # tlp install
-sudo pacman -Syu tlp tlp-rdw --noconfirm
+sudo pacman -Syu tlp tlp-rdw 
 sudo systemctl enable tlp.service
 sudo systemctl enable NetworkManager-dispatcher.service
 sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
