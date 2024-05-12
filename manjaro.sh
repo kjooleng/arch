@@ -69,7 +69,8 @@ sudo pacman -Syu fcitx5-im fcitx5-chinese-addons --noconfirm
 # other apps
 sudo pacman -Syu vlc gst-libav filezilla openvpn networkmanager-openvpn x11vnc parcellite --noconfirm
 # not needed for mate
-sudo pacman -Syu fuseiso nemo filemanager-actions cdrtools alacarte  --noconfirm
+#sudo pacman -Syu fuseiso nemo filemanager-actions cdrtools alacarte  --noconfirm
+sudo pacman -Syu fuseiso nemo gnome-disk-utility cdrtools alacarte  --noconfirm
 
 #for vm
 #pacman -Syu virtualbox-guest-utils --noconfirm
