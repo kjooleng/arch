@@ -517,7 +517,8 @@ arch-chroot /mnt pacman -S firefox vlc gst-libav filezilla networkmanager openvp
 # only when mate is not installed, use fuseiso and nemo for mounting iso and alacarte for menu editing
 #arch-chroot /mnt pacman -S firefox vlc gst-libav filezilla networkmanager openvpn networkmanager-openvpn nm-connection-editor network-manager-applet dolphin cdemu-daemon cdemu-client alacarte x11vnc parcellite --noconfirm
 arch-chroot /mnt pacman -S firefox vlc gst-libav filezilla networkmanager openvpn networkmanager-openvpn nm-connection-editor network-manager-applet --noconfirm
-arch-chroot /mnt pacman -S fuseiso nemo filemanager-actions cdrtools alacarte x11vnc parcellite --noconfirm;;
+#arch-chroot /mnt pacman -S fuseiso nemo filemanager-actions cdrtools alacarte x11vnc parcellite --noconfirm;;
+arch-chroot /mnt pacman -S fuseiso nemo gnome-disk-utility cdrtools alacarte x11vnc parcellite --noconfirm;;
 esac
 
 
