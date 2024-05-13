@@ -4,7 +4,7 @@
 curl -o wine.sh -SL https://bit.ly/3XrNsnz
 
 #curl -o locale.gen -SL https://bit.ly/46pMfBd
-curl -o pacman.conf -SL https://bit.ly/44iJTCR
+#curl -o pacman.conf -SL https://bit.ly/44iJTCR
 #curl -o sudoers -SL https://bit.ly/3NxuE1v
 
 #nano install.sh
@@ -15,7 +15,7 @@ nano wine.sh
 
 #nano locale.gen
 
-nano pacman.conf
+#nano pacman.conf
 
 #nano sudoers
 
@@ -294,7 +294,7 @@ genfstab -U /mnt >>/mnt/etc/fstab
 #echo "/swapfile none swap defaults 0 0" >> /mnt/etc/fstab
 
 # copy some config files to /mnt
-cp pacman.conf /mnt/etc/pacman.conf
+#cp pacman.conf /mnt/etc/pacman.conf
 #cp locale.gen /mnt/etc/locale.gen
 #cp sudoers /mnt/etc/sudoers
 
@@ -346,10 +346,13 @@ echo "root:$NEW_PASSWORD" | arch-chroot /mnt chpasswd  #chpasswd takes the forma
 #sleep 5
 
 #Chaotic-AUR
-#sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
-#sudo pacman-key --lsign-key FBA220DFC880C036
-#sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
+pacman-key --lsign-key FBA220DFC880C036
+pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
+echo "  " >> /mnt/etc/pacman.conf
+echo "[chaotic-aur]" >> /mnt/etc/pacman.conf
+echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /mnt/etc/pacman.conf
 
 arch-chroot /mnt pacman -Sy
 
