@@ -4,7 +4,7 @@
 curl -o wine.sh -SL https://bit.ly/3XrNsnz
 
 #curl -o locale.gen -SL https://bit.ly/46pMfBd
-#curl -o pacman.conf -SL https://bit.ly/44iJTCR
+curl -o pacman.conf -SL https://bit.ly/44iJTCR
 #curl -o sudoers -SL https://bit.ly/3NxuE1v
 
 #nano install.sh
@@ -15,7 +15,7 @@ nano wine.sh
 
 #nano locale.gen
 
-#nano pacman.conf
+nano pacman.conf
 
 #nano sudoers
 
