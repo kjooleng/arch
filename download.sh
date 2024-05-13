@@ -346,13 +346,13 @@ echo "root:$NEW_PASSWORD" | arch-chroot /mnt chpasswd  #chpasswd takes the forma
 #sleep 5
 
 #Chaotic-AUR
-pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
-pacman-key --lsign-key FBA220DFC880C036
-pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+#pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
+#pacman-key --lsign-key FBA220DFC880C036
+#pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
-echo "  " >> /mnt/etc/pacman.conf
-echo "[chaotic-aur]" >> /mnt/etc/pacman.conf
-echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /mnt/etc/pacman.conf
+#echo "  " >> /mnt/etc/pacman.conf
+#echo "[chaotic-aur]" >> /mnt/etc/pacman.conf
+#echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /mnt/etc/pacman.conf
 
 arch-chroot /mnt pacman -Sy
 
@@ -513,9 +513,9 @@ arch-chroot /mnt systemctl enable lightdm
 
 # install wine
 # nano /etc/pacman.conf
-arch-chroot /mnt pacman -Syu
-arch-chroot /mnt pacman -S wine wine-mono wine-gecko winetricks --noconfirm
-arch-chroot /mnt wine --version
+#arch-chroot /mnt pacman -Syu
+#arch-chroot /mnt pacman -S wine wine-mono wine-gecko winetricks --noconfirm
+#arch-chroot /mnt wine --version
 #winetricks corefonts dotnet40 cjkfonts
 #winetricks corefonts cjkfonts
 
@@ -541,13 +541,13 @@ case $desktop_install in
 
 [3]* )
 # mate install
-arch-chroot /mnt pacman -S firefox vlc gst-libav filezilla networkmanager openvpn networkmanager-openvpn nm-connection-editor network-manager-applet cdrtools x11vnc parcellite --noconfirm;;
+arch-chroot /mnt pacman -S firefox neofetch vlc gst-libav filezilla networkmanager openvpn networkmanager-openvpn nm-connection-editor network-manager-applet cdrtools x11vnc parcellite --noconfirm;;
 
 # others
 *) 
 # only when mate is not installed, use fuseiso and nemo for mounting iso and alacarte for menu editing
 #arch-chroot /mnt pacman -S firefox vlc gst-libav filezilla networkmanager openvpn networkmanager-openvpn nm-connection-editor network-manager-applet dolphin cdemu-daemon cdemu-client alacarte x11vnc parcellite --noconfirm
-arch-chroot /mnt pacman -S firefox vlc gst-libav filezilla networkmanager openvpn networkmanager-openvpn nm-connection-editor network-manager-applet --noconfirm
+arch-chroot /mnt pacman -S firefox neofetch vlc gst-libav filezilla networkmanager openvpn networkmanager-openvpn nm-connection-editor network-manager-applet --noconfirm
 #arch-chroot /mnt pacman -S fuseiso nemo filemanager-actions cdrtools alacarte x11vnc parcellite --noconfirm;;
 arch-chroot /mnt pacman -S fuseiso nemo gnome-disk-utility cdrtools alacarte x11vnc parcellite  --noconfirm;;
 esac
