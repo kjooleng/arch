@@ -25,7 +25,7 @@ sudo pacman -Syu
 
 # install wine
 #sudo pacman -Syu
-#sudo pacman -S wine wine-mono wine-gecko winetricks --noconfirm
+sudo pacman -S wine wine-mono wine-gecko winetricks --noconfirm
 #wine --version
 winetricks corefonts 
 winetricks dotnet40 cjkfonts
