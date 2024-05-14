@@ -103,7 +103,7 @@ sudo pacman -S chaotic-aur/youtubedl-gui --noconfirm
 #sudo pacman -S chaotic-aur/spotify --noconfirm
 sudo pacman -S chaotic-aur/video-downloader --noconfirm
 sudo pacman -S chaotic-aur/xorgxrdp --noconfirm
-sudo pacman -S chaotic-aur/authy --noconfirm
+#sudo pacman -S chaotic-aur/authy --noconfirm
 sudo pacman -S bitwarden --noconfirm
 sudo pacman -S clipgrab --noconfirm
 #sudo pacman -S reflector rsync curl --noconfirm
