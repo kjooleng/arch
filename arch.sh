@@ -68,7 +68,7 @@ sudo pacman -S vlc gst-libav filezilla openvpn networkmanager-openvpn x11vnc par
 sudo pacman -S fuseiso nemo gnome-disk-utility cdrtools alacarte  --noconfirm
 
 #for vm
-#pacman -S virtualbox-guest-utils --noconfirm
+#sudo pacman -S virtualbox-guest-utils --noconfirm
 #systemctl enable vboxservice
 
 winetricks corefonts --noconfirm
