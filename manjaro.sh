@@ -73,7 +73,7 @@ sudo pacman -Syu vlc gst-libav filezilla openvpn networkmanager-openvpn x11vnc p
 sudo pacman -Syu fuseiso nemo gnome-disk-utility cdrtools alacarte  --noconfirm
 
 #for vm
-#pacman -Syu virtualbox-guest-utils --noconfirm
+#sudo pacman -Syu virtualbox-guest-utils --noconfirm
 #systemctl enable vboxservice
 
 winetricks corefonts --noconfirm
@@ -104,7 +104,7 @@ sudo pacman -Syu chaotic-aur/youtubedl-gui --noconfirm
 #sudo pacman -Syu chaotic-aur/spotify --noconfirm
 sudo pacman -Syu chaotic-aur/video-downloader --noconfirm
 sudo pacman -Syu chaotic-aur/xorgxrdp --noconfirm
-sudo pacman -Syu chaotic-aur/authy --noconfirm
+#sudo pacman -Syu chaotic-aur/authy --noconfirm
 sudo pacman -Syu bitwarden --noconfirm
 sudo pacman -Syu clipgrab --noconfirm
 #sudo pacman -Syu reflector rsync curl --noconfirm
