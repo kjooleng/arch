@@ -9,6 +9,8 @@ fi
 
 #su
 
+#sudo pacman -S reflector rsync curl --noconfirm
+pacman -S reflector rsync curl --noconfirm
 # set swap size
 echo Enter desired swap file size in MiB
 read swap
