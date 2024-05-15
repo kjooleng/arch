@@ -11,6 +11,7 @@ fi
 
 #sudo pacman -S reflector rsync curl --noconfirm
 sudo pacman -S reflector rsync curl --noconfirm
+reflector -c "SG" -p https --sort rate --save /etc/pacman.d/mirrorlist
 
 # set swap size
 echo Enter desired swap file size in MiB
