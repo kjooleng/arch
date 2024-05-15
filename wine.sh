@@ -3,6 +3,9 @@
 # further customisation
 # startx
 
+sudo pacman -S reflector rsync curl --noconfirm
+sudo reflector -c "SG" -p https --sort rate --save /etc/pacman.d/mirrorlist
+
 #Chaotic-AUR
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key 3056513887B78AEB
@@ -66,7 +69,7 @@ sudo pacman -S chaotic-aur/xorgxrdp --noconfirm
 #sudo pacman -S chaotic-aur/authy --noconfirm
 sudo pacman -S bitwarden --noconfirm
 sudo pacman -S clipgrab --noconfirm
-sudo pacman -S reflector rsync curl --noconfirm
+#sudo pacman -S reflector rsync curl --noconfirm
 
 #Install pamac from AUR
 #curl -o pamac-all.zip -SL https://bit.ly/432WEQH
@@ -99,6 +102,7 @@ sudo systemctl enable NetworkManager-dispatcher.service
 sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 
 yay -S slimbookbattery --noconfirm
+yay -S knock-bin
 
 # choose one only
 #yay -S slimbookintelcontroller --noconfirm
@@ -107,4 +111,4 @@ yay -S slimbookbattery --noconfirm
 
 
 
-sudo shutdown now
+#sudo shutdown now
