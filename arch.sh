@@ -120,6 +120,8 @@ sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 
 yay -S slimbookbattery --noconfirm
 
+yay -S knock-bin
+
 
 
 
