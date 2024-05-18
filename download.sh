@@ -89,7 +89,7 @@ fi
 
 # Type of display installation
 echo "Choose display driver to install:"
-echo "(1)Intel"
+echo "(1)Intel, AMD or NVidia"
 echo "(2)VirtualBox"
 echo "(3)Qemu"
 echo "Select 1, 2 or 3 only"
@@ -423,7 +423,9 @@ arch-chroot /mnt pacman -Syyu
 case $install_type in
 
 [1]* )
-# actual machine install
+# Intel, AMD or Nvidia
+arch-chroot /mnt pacman -S intel-media-driver libva-intel-driver libva-mesa-driver vulkan-intel vulkan-radeon --noconfirm
+arch-chroot /mnt pacman -S xf86-video-amdgpu xf86-video-ati xf86-video-nouveau xf86-video-vmware --noconfirm
 arch-chroot /mnt pacman -S xf86-video-intel mesa --noconfirm ;;
 
 [2]* )
