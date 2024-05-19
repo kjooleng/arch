@@ -3,6 +3,26 @@
 # further customisation
 # startx
 
+#login as su before running script
+
+if [ "$(id -u)" -ne 0 ]; then
+    echo 'This script must be run with root privileges' >&2
+    exit 1
+fi
+
+# set swap size
+echo Enter desired swap file size in MiB
+read swap
+
+# swap file creation
+dd if=/dev/zero of=/swapfile bs=1M count=$swap status=progress
+chmod 600 /swapfile
+mkswap -U clear /swapfile
+swapon /swapfile
+
+echo "  " >> /etc/fstab
+echo "/swapfile none swap defaults 0 0" >> /etc/fstab
+
 #no need if not using arch install
 #sudo pacman -S reflector rsync curl --noconfirm
 #sudo reflector -c "SG" -p https --sort rate --save /etc/pacman.d/mirrorlist
