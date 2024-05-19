@@ -565,6 +565,10 @@ arch-chroot /mnt systemctl enable NetworkManager
 
 case $install_type in
 
+[1]* )
+# virtualbox install
+arch-chroot /mnt systemctl enable vboxservice;;
+
 [2]* )
 # virtualbox install
 arch-chroot /mnt systemctl enable vboxservice;;
