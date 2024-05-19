@@ -294,7 +294,7 @@ genfstab -U /mnt >>/mnt/etc/fstab
 #echo "/swapfile none swap defaults 0 0" >> /mnt/etc/fstab
 
 # copy some config files to /mnt
-#cp pacman.conf /mnt/etc/pacman.conf
+cp pacman.conf /mnt/etc/pacman.conf
 #cp locale.gen /mnt/etc/locale.gen
 #cp sudoers /mnt/etc/sudoers
 
