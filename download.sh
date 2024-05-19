@@ -45,6 +45,7 @@ ping -q -c 1 archlinux.org >/dev/null || { echo "No Internet Connection!; "exit 
 
 # get fastest mirror, replace with your own country code
 reflector -c "SG" -p https --sort rate --save /etc/pacman.d/mirrorlist
+nano /etc/pacman.d/mirrorlist
 
 pacman -Sy dialog --noconfirm
 
