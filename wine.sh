@@ -3,8 +3,9 @@
 # further customisation
 # startx
 
-sudo pacman -S reflector rsync curl --noconfirm
-sudo reflector -c "SG" -p https --sort rate --save /etc/pacman.d/mirrorlist
+#no need if not using arch install
+#sudo pacman -S reflector rsync curl --noconfirm
+#sudo reflector -c "SG" -p https --sort rate --save /etc/pacman.d/mirrorlist
 
 #Chaotic-AUR
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
