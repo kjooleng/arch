@@ -2,6 +2,7 @@
 #curl -o install.sh -SL https://bit.ly/42Z4SsR
 #curl -o time.sh -SL https://bit.ly/3B6BGEw
 curl -o wine.sh -SL https://bit.ly/3XrNsnz
+curl -o disk.sh -SL https://raw.githubusercontent.com/kjooleng/arch/main/disk.sh
 
 #curl -o locale.gen -SL https://bit.ly/46pMfBd
 curl -o pacman.conf -SL https://bit.ly/44iJTCR
@@ -16,6 +17,7 @@ nano wine.sh
 #nano locale.gen
 
 nano pacman.conf
+nano disk.sh
 
 #nano sudoers
 
@@ -301,6 +303,8 @@ cp pacman.conf /mnt/etc/pacman.conf
 
 #cp time.sh /mnt
 cp wine.sh /mnt
+cp disk.sh /mnt
+cp download.sh /mnt
 
 # chroot into the new system and run the time.sh script
 # arch-chroot /mnt ./time.sh
