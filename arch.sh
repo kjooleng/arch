@@ -121,7 +121,7 @@ sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 
 yay -S slimbookbattery --noconfirm
 
-yay -S knock-bin
+yay -S knock-bin --noconfirm
 
 yay -S authy-desktop-win32-bin
 
