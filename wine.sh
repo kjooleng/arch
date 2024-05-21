@@ -76,6 +76,11 @@ sudo pacman -S clipgrab --noconfirm
 #makepkg -si --noconfirm
 #cd
 
+#install firewall
+yay -S firewalld --noconfirm
+sudo systemctl enable firewalld
+sudo systemctl start firewalld
+
 # tlp install
 sudo pacman -S tlp tlp-rdw --noconfirm
 sudo systemctl enable tlp.service
@@ -84,6 +89,7 @@ sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 
 yay -S slimbookbattery --noconfirm
 yay -S knock-bin --noconfirm
+yay -S authy-desktop-win32-bin --noconfirm
 
 # choose one only
 #yay -S slimbookintelcontroller --noconfirm
