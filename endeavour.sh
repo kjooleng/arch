@@ -116,7 +116,8 @@ sudo systemctl enable NetworkManager-dispatcher.service
 sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 
 yay -S slimbookbattery --noconfirm
-
+yay -S knock-bin --noconfirm
+yay -S authy-desktop-win32-bin --noconfirm
 
 
 
