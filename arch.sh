@@ -92,7 +92,10 @@ sudo pacman -S chaotic-aur/mercury-browser-avx-bin --noconfirm
 #sudo pacman -S chaotic-aur/waterfox-bin --noconfirm
 sudo pacman -S chaotic-aur/microsoft-edge-stable-bin --noconfirm
 trizen -S appimagelauncher --noconfirm
-sudo pacman -S chaotic-aur/pamac-aur --noconfirm
+#sudo pacman -S chaotic-aur/pamac-aur --noconfirm
+sudo pacman -S chaotic-aur/pamac --noconfirm
+sudo pacman -S chaotic-aur/brave-bin --noconfirm
+
 
 #no need for running vm
 sudo pacman -S chaotic-aur/dropbox --noconfirm
