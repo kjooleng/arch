@@ -84,11 +84,11 @@ sudo pacman -S chaotic-aur/trizen --noconfirm
 sudo pacman -S chaotic-aur/p7zip-gui --noconfirm
 sudo pacman -S chaotic-aur/anydesk --noconfirm
 #sudo pacman -S chaotic-aur/firedragon --noconfirm
-sudo pacman -S chaotic-aur/librewolf --noconfirm
+#sudo pacman -S chaotic-aur/librewolf --noconfirm
 #sudo pacman -S chaotic-aur/icecat --noconfirm
-sudo pacman -S chaotic-aur/floorp --noconfirm
-sudo pacman -S chaotic-aur/google-chrome --noconfirm
-sudo pacman -S chaotic-aur/mercury-browser-avx-bin --noconfirm
+#sudo pacman -S chaotic-aur/floorp --noconfirm
+#sudo pacman -S chaotic-aur/google-chrome --noconfirm
+#sudo pacman -S chaotic-aur/mercury-browser-avx-bin --noconfirm
 #sudo pacman -S chaotic-aur/waterfox-bin --noconfirm
 sudo pacman -S chaotic-aur/microsoft-edge-stable-bin --noconfirm
 trizen -S appimagelauncher --noconfirm
