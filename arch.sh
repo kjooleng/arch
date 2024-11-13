@@ -75,6 +75,11 @@ sudo pacman -S fuseiso nemo gnome-disk-utility cdrtools alacarte  --noconfirm
 #sudo pacman -S virtualbox-guest-utils --noconfirm
 #systemctl enable vboxservice
 
+#bluetooth
+sudo pacman -S bluez bluez-utils blueman
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
+
 winetricks corefonts --noconfirm
 winetricks dotnet40 cjkfonts --noconfirm
 
