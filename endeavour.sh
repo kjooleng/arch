@@ -83,22 +83,24 @@ winetricks dotnet40 cjkfonts --noconfirm
 sudo pacman -S chaotic-aur/trizen --noconfirm
 sudo pacman -S chaotic-aur/p7zip-gui --noconfirm
 sudo pacman -S chaotic-aur/anydesk --noconfirm
-sudo pacman -S chaotic-aur/firedragon --noconfirm
-sudo pacman -S chaotic-aur/librewolf --noconfirm
-sudo pacman -S chaotic-aur/icecat --noconfirm
-sudo pacman -S chaotic-aur/floorp --noconfirm
-sudo pacman -S chaotic-aur/google-chrome --noconfirm
-sudo pacman -S chaotic-aur/mercury-browser-avx-bin --noconfirm
-sudo pacman -S chaotic-aur/waterfox-bin --noconfirm
+#sudo pacman -S chaotic-aur/firedragon --noconfirm
+#sudo pacman -S chaotic-aur/librewolf --noconfirm
+#sudo pacman -S chaotic-aur/icecat --noconfirm
+#sudo pacman -S chaotic-aur/floorp --noconfirm
+#sudo pacman -S chaotic-aur/google-chrome --noconfirm
+#sudo pacman -S chaotic-aur/mercury-browser-avx-bin --noconfirm
+#sudo pacman -S chaotic-aur/waterfox-bin --noconfirm
 sudo pacman -S chaotic-aur/microsoft-edge-stable-bin --noconfirm
 trizen -S appimagelauncher --noconfirm
-sudo pacman -S chaotic-aur/pamac-aur --noconfirm
+#sudo pacman -S chaotic-aur/pamac-aur --noconfirm
+sudo pacman -S chaotic-aur/pamac --noconfirm
+sudo pacman -S chaotic-aur/brave-bin --noconfirm
 
 #no need for running vm
 sudo pacman -S chaotic-aur/dropbox --noconfirm
 rm -rf ~/.dropbox-dist
 install -dm0 ~/.dropbox-dist
-sudo pacman -S chaotic-aur/youtubedl-gui --noconfirm
+#sudo pacman -S chaotic-aur/youtubedl-gui --noconfirm
 #sudo pacman -S chaotic-aur/youplay --noconfirm
 #sudo pacman -S chaotic-aur/spotify --noconfirm
 sudo pacman -S chaotic-aur/video-downloader --noconfirm
@@ -117,7 +119,7 @@ sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 
 yay -S slimbookbattery --noconfirm
 yay -S knock-bin --noconfirm
-yay -S authy-desktop-win32-bin --noconfirm
+#yay -S authy-desktop-win32-bin --noconfirm
 
 
 
