@@ -70,7 +70,8 @@ sudo pacman -S fcitx5-im fcitx5-chinese-addons --noconfirm
 #sudo pacman -S vlc gst-libav filezilla openvpn networkmanager-openvpn x11vnc parcellite --noconfirm
 sudo pacman -S gst-libav openvpn networkmanager-openvpn x11vnc parcellite --noconfirm
 #sudo pacman -S fuseiso nemo filemanager-actions cdrtools alacarte  --noconfirm
-sudo pacman -S fuseiso nemo gnome-disk-utility cdrtools alacarte  --noconfirm
+#sudo pacman -S fuseiso nemo gnome-disk-utility cdrtools alacarte  --noconfirm
+sudo pacman -S fuseiso nemo gnome-clocks gnome-disk-utility cdrtools alacarte  --noconfirm
 
 #for vm
 #sudo pacman -S virtualbox-guest-utils --noconfirm
