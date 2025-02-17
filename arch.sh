@@ -67,8 +67,8 @@ sudo pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts ado
 sudo pacman -S fcitx5-im fcitx5-chinese-addons --noconfirm
 
 # other apps
-#sudo pacman -S vlc gst-libav filezilla openvpn networkmanager-openvpn x11vnc parcellite --noconfirm
-sudo pacman -S gst-libav openvpn networkmanager-openvpn x11vnc parcellite --noconfirm
+sudo pacman -S vlc gst-libav filezilla openvpn networkmanager-openvpn x11vnc parcellite --noconfirm
+#sudo pacman -S vlc gst-libav openvpn networkmanager-openvpn x11vnc parcellite --noconfirm
 #sudo pacman -S fuseiso nemo filemanager-actions cdrtools alacarte  --noconfirm
 #sudo pacman -S fuseiso nemo gnome-disk-utility cdrtools alacarte  --noconfirm
 sudo pacman -S fuseiso nemo gnome-clocks gnome-disk-utility cdrtools alacarte  --noconfirm
@@ -82,8 +82,8 @@ sudo pacman -S bluez bluez-utils blueman
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 
-winetricks corefonts --noconfirm
-winetricks dotnet40 cjkfonts --noconfirm
+winetricks corefonts cjkfonts dxvk vkd3d jet40 mdac28 --noconfirm
+winetricks dotnet35 dotnet40 --noconfirm
 
 # other customisation
 sudo pacman -S chaotic-aur/yay --noconfirm
