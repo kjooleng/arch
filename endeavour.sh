@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 #login as su before running script
 
 if [ "$(id -u)" -ne 0 ]; then
