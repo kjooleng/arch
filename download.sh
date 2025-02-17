@@ -32,7 +32,7 @@ chmod +x install.sh
 
 #chmod +x time.sh
 
-./install.sh 
+./install.sh
 
 # KJL install of Arch Linux (BIOS or UEFI install)
 # 
