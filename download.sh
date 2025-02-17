@@ -65,8 +65,8 @@ clear
 #MEMORY_SIZE=3G
 
 # set swap size
-#echo Enter desired swap file size in MiB
-#read swap
+echo Enter desired swap file size in MiB
+read swap
 
 # set username
 while true; do               
@@ -280,10 +280,10 @@ mount "$ROOT_DEVICE" /mnt
 fi
 
 # swap file creation
-#dd if=/dev/zero of=/mnt/swapfile bs=1M count=$swap status=progress
-#chmod 600 /mnt/swapfile
-#mkswap -U clear /mnt/swapfile
-#swapon /mnt/swapfile
+dd if=/dev/zero of=/mnt/swapfile bs=1M count=$swap status=progress
+chmod 600 /mnt/swapfile
+mkswap -U clear /mnt/swapfile
+swapon /mnt/swapfile
 #echo "/swapfile none swap defaults 0 0" >> /mnt/etc/fstab
 #echo "vm.swappiness = 110" > /mnt/etc/sysctl.d/99-swappiness.conf
 
@@ -293,11 +293,12 @@ reflector -c "SG" -p https --sort rate --save /mnt/etc/pacman.d/mirrorlist
 
 # install necessary packages	
 #pacstrap /mnt base base-devel linux linux-headers linux-firmware nano dhcpcd iwd
-pacstrap /mnt base base-devel linux linux-headers linux-firmware nano dhcpcd
+#pacstrap /mnt base base-devel linux linux-headers linux-firmware nano dhcpcd
+pacstrap /mnt base base-devel linux-lts linux-lts-headers linux-firmware nano dhcpcd
 
 # Generate an fstab config
 genfstab -U /mnt >>/mnt/etc/fstab
-#echo "/swapfile none swap defaults 0 0" >> /mnt/etc/fstab
+echo "/swapfile none swap defaults 0 0" >> /mnt/etc/fstab
 
 # copy some config files to /mnt
 cp pacman.conf /mnt/etc/pacman.conf
@@ -344,7 +345,7 @@ arch-chroot /mnt systemctl enable dhcpcd
 arch-chroot /mnt systemctl start dhcpcd
 
 # set swappiness
-#echo "vm.swappiness = 110" > /mnt/etc/sysctl.d/99-swappiness.conf
+echo "vm.swappiness = 110" > /mnt/etc/sysctl.d/99-swappiness.conf
 
 #Set root password
 #echo 'Set root password' >&2
@@ -559,7 +560,7 @@ arch-chroot /mnt pacman -S firefox neofetch vlc gst-libav filezilla networkmanag
 #arch-chroot /mnt pacman -S firefox vlc gst-libav filezilla networkmanager openvpn networkmanager-openvpn nm-connection-editor network-manager-applet dolphin cdemu-daemon cdemu-client alacarte x11vnc parcellite --noconfirm
 arch-chroot /mnt pacman -S firefox neofetch vlc gst-libav filezilla networkmanager openvpn networkmanager-openvpn nm-connection-editor network-manager-applet --noconfirm
 #arch-chroot /mnt pacman -S fuseiso nemo filemanager-actions cdrtools alacarte x11vnc parcellite --noconfirm;;
-arch-chroot /mnt pacman -S fuseiso nemo gnome-disk-utility cdrtools alacarte x11vnc parcellite  --noconfirm;;
+arch-chroot /mnt pacman -S fuseiso nemo gnome-clocks gnome-disk-utility cdrtools alacarte x11vnc parcellite  --noconfirm;;
 esac
 
 
