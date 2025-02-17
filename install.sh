@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 #
 # KJL install of Arch Linux (BIOS or UEFI install)
 # 
@@ -261,7 +259,8 @@ reflector -c "SG" -p https --sort rate --save /mnt/etc/pacman.d/mirrorlist
 
 # install necessary packages	
 #pacstrap /mnt base base-devel linux linux-headers linux-firmware nano dhcpcd iwd
-pacstrap /mnt base base-devel linux linux-headers linux-firmware nano dhcpcd
+#pacstrap /mnt base base-devel linux linux-headers linux-firmware nano dhcpcd
+pacstrap /mnt base base-devel linux-lts linux-lts-headers linux-firmware nano dhcpcd
 
 # Generate an fstab config
 genfstab -U /mnt >>/mnt/etc/fstab
