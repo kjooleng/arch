@@ -1,5 +1,5 @@
 #!/bin/bash
-#curl -o install.sh -SL https://bit.ly/42Z4SsR
+curl -o install.sh -SL https://bit.ly/42Z4SsR
 #curl -o time.sh -SL https://bit.ly/3B6BGEw
 curl -o wine.sh -SL https://bit.ly/3XrNsnz
 #curl -o disk.sh -SL https://raw.githubusercontent.com/kjooleng/arch/main/disk.sh
@@ -11,7 +11,7 @@ curl -o disk.sh -SL https://bit.ly/44SFwPC
 curl -o pacman.conf -SL https://bit.ly/44iJTCR
 #curl -o sudoers -SL https://bit.ly/3NxuE1v
 
-#nano install.sh
+nano install.sh
 
 #nano time.sh
 
