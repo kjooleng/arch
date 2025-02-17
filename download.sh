@@ -28,11 +28,11 @@ nano disk.sh
 # edit locale.gen if you need to change language options
 # nano locale.gen
 
-#chmod +x install.sh
+chmod +x install.sh
 
 #chmod +x time.sh
 
-#./install.sh 
+./install.sh 
 
 # KJL install of Arch Linux (BIOS or UEFI install)
 # 
