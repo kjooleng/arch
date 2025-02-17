@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#!/bin/bash
+
 #
 # KJL install of Arch Linux (BIOS or UEFI install)
 # 
