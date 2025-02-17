@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 # further customisation
 # startx
 
