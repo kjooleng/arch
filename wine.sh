@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 # further customisation
 # startx
 
@@ -12,8 +10,8 @@
 #sudo pacman -Syu
 sudo pacman -S wine wine-mono wine-gecko winetricks --noconfirm
 #wine --version
-winetricks corefonts 
-winetricks dotnet40 cjkfonts
+winetricks corefonts cjkfonts dxvk vkd3d jet40 mdac28
+winetricks dotnet35 dotnet40 
 #winetricks corefonts cjkfonts
 #sudo pacman -S lib32-pipewire pipewire-pulse lib32-libpulse lib32-gnutls --noconfirm
 #sudo pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts adobe-source-han-sans-hk-fonts --noconfirm
@@ -30,15 +28,16 @@ sudo pacman -S chaotic-aur/trizen --noconfirm
 sudo pacman -S chaotic-aur/p7zip-gui --noconfirm
 sudo pacman -S chaotic-aur/anydesk --noconfirm
 #sudo pacman -S chaotic-aur/firedragon --noconfirm
-sudo pacman -S chaotic-aur/librewolf --noconfirm
+#sudo pacman -S chaotic-aur/librewolf --noconfirm
 #sudo pacman -S chaotic-aur/icecat --noconfirm
-sudo pacman -S chaotic-aur/floorp --noconfirm
-sudo pacman -S chaotic-aur/google-chrome --noconfirm
-sudo pacman -S chaotic-aur/mercury-browser-avx-bin --noconfirm
+#sudo pacman -S chaotic-aur/floorp --noconfirm
+#sudo pacman -S chaotic-aur/google-chrome --noconfirm
+#sudo pacman -S chaotic-aur/mercury-browser-avx-bin --noconfirm
 #sudo pacman -S chaotic-aur/waterfox-bin --noconfirm
 sudo pacman -S chaotic-aur/microsoft-edge-stable-bin --noconfirm
 trizen -S appimagelauncher --noconfirm
 sudo pacman -S chaotic-aur/pamac-aur --noconfirm
+sudo pacman -S chaotic-aur/brave-bin --noconfirm
 
 #no need for running vm
 
@@ -92,7 +91,7 @@ sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 
 yay -S slimbookbattery --noconfirm
 yay -S knock-bin --noconfirm
-yay -S authy-desktop-win32-bin --noconfirm
+#yay -S authy-desktop-win32-bin --noconfirm
 
 # choose one only
 #yay -S slimbookintelcontroller --noconfirm
