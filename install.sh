@@ -326,7 +326,12 @@ arch-chroot /mnt pacman-key --lsign-key FBA220DFC880C036
 #sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 arch-chroot /mnt pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
-arch-chroot /mnt pacman -Sy
+echo "  " >> /mnt/etc/pacman.conf
+echo "[chaotic-aur]" >> /mnt/etc/pacman.conf
+echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /mnt/etc/pacman.conf
+
+arch-chroot /mnt pacman -Syu
+#arch-chroot /mnt pacman -Sy
 
 if [ -d /sys/firmware/efi/efivars/ ]; then #for uefi
 	echo "Install grub for UEFI";
