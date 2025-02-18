@@ -1,4 +1,4 @@
-#!/bin/bash
+t#!/bin/bash
 # KJL install of Arch Linux (BIOS or UEFI install)
 # 
 # Based on https://www.linuxfordevices.com/tutorials/linux/how-to-install-arch-linux and
@@ -557,7 +557,7 @@ echo "Server = https://aur.andontie.net/$arch" >> /mnt/etc/pacman.conf
 
 arch-chroot /mnt pacman -Syu
 
-
+exit
 
 ###### END  ######
 
