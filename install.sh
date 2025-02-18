@@ -329,16 +329,7 @@ echo "root:$NEW_PASSWORD" | arch-chroot /mnt chpasswd  #chpasswd takes the forma
 #echo "[chaotic-aur]" >> /mnt/etc/pacman.conf
 #echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /mnt/etc/pacman.conf
 
-#andontie AUR
-arch-chroot /mnt pacman-key --recv-key 72BF227DD76AE5BF
-arch-chroot /mnt pacman-key --lsign-key 72BF227DD76AE5BF
-
-echo "  " >> /mnt/etc/pacman.conf
-echo "[andontie-aur]" >> /mnt/etc/pacman.conf
-echo "Server = https://aur.andontie.net/$arch" >> /mnt/etc/pacman.conf
-
-arch-chroot /mnt pacman -Syu
-#arch-chroot /mnt pacman -Sy
+arch-chroot /mnt pacman -Sy
 
 if [ -d /sys/firmware/efi/efivars/ ]; then #for uefi
 	echo "Install grub for UEFI";
@@ -555,6 +546,16 @@ arch-chroot /mnt systemctl enable vboxservice;;
 
 *)  ;;
 esac
+
+#andontie AUR
+arch-chroot /mnt pacman-key --recv-key 72BF227DD76AE5BF
+arch-chroot /mnt pacman-key --lsign-key 72BF227DD76AE5BF
+
+echo "  " >> /mnt/etc/pacman.conf
+echo "[andontie-aur]" >> /mnt/etc/pacman.conf
+echo "Server = https://aur.andontie.net/$arch" >> /mnt/etc/pacman.conf
+
+arch-chroot /mnt pacman -Syu
 
 
 
