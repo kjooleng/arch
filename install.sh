@@ -548,8 +548,8 @@ arch-chroot /mnt systemctl enable vboxservice;;
 esac
 
 #andontie AUR
-arch-chroot /mnt pacman-key --recv-key 72BF227DD76AE5BF
-arch-chroot /mnt pacman-key --lsign-key 72BF227DD76AE5BF
+sudo arch-chroot /mnt pacman-key --recv-key 72BF227DD76AE5BF
+sudo arch-chroot /mnt pacman-key --lsign-key 72BF227DD76AE5BF
 
 echo "  " >> /mnt/etc/pacman.conf
 echo "[andontie-aur]" >> /mnt/etc/pacman.conf
