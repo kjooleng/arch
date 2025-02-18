@@ -290,7 +290,8 @@ swapon /mnt/swapfile
 #echo "vm.swappiness = 110" > /mnt/etc/sysctl.d/99-swappiness.conf
 
 # get fastest mirror, replace with your own country code
-reflector -c "SG" -p https --sort rate --save /mnt/etc/pacman.d/mirrorlist
+#reflector -c "SG" -p https --sort rate --save /mnt/etc/pacman.d/mirrorlist
+mv /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
 
 
 # install necessary packages	
@@ -311,6 +312,7 @@ cp pacman.conf /mnt/etc/pacman.conf
 cp wine.sh /mnt
 cp disk.sh /mnt
 cp download.sh /mnt
+cp install.sh /mnt
 
 # chroot into the new system and run the time.sh script
 # arch-chroot /mnt ./time.sh
