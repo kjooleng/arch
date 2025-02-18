@@ -34,7 +34,7 @@ chmod +x install.sh
 
 ./install.sh
 
-exit
+#exit
 
 # KJL install of Arch Linux (BIOS or UEFI install)
 # 
