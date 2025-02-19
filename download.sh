@@ -12,6 +12,15 @@ curl -o others.sh -SL https://bit.ly/43456Cu
 curl -o pacman.conf -SL https://bit.ly/44iJTCR
 #curl -o sudoers -SL https://bit.ly/3NxuE1v
 
+#for archbang only
+#pacman -Sy reflector --noconfirm
+
+#script cleanup
+pacman -Sy dos2unix --noconfirm
+
+dos2unix install.sh
+dos2unix others.sh
+
 nano install.sh
 
 #nano time.sh
@@ -30,6 +39,7 @@ nano disk.sh
 # nano locale.gen
 
 chmod +x install.sh
+chmod +x others.sh
 
 #chmod +x time.sh
 
