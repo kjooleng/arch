@@ -22,6 +22,7 @@ dos2unix install.sh
 dos2unix others.sh
 
 nano install.sh
+nano others.sh
 
 #nano time.sh
 
@@ -43,7 +44,7 @@ chmod +x others.sh
 
 #chmod +x time.sh
 
-./install.sh
+sudo ./install.sh
 
 exit
 
