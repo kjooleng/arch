@@ -593,7 +593,7 @@ echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /mnt/etc/pacman.conf
 
 arch-chroot /mnt pacman -Sy
 
-./others.sh
+sudo ./others.sh
 exit
 
 ###### END  ######
