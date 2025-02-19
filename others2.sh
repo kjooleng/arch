@@ -35,3 +35,13 @@ sudo pacman -S tlp tlp-rdw --noconfirm
 sudo systemctl enable tlp.service
 sudo systemctl enable NetworkManager-dispatcher.service
 sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
+
+if [ -d /sys/firmware/efi/efivars/ ]; then #for uefi
+	echo "Shutting down....";
+	shutdown now
+	
+else	#for bios
+	echo "Rebooting....";	
+    reboot
+
+fi
