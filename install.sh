@@ -277,6 +277,7 @@ cp pacman.conf /mnt/etc/pacman.conf
 #cp time.sh /mnt
 cp wine.sh /mnt
 cp install.sh /mnt
+cp others.sh /mnt
 
 # chroot into the new system and run the time.sh script
 # arch-chroot /mnt ./time.sh
