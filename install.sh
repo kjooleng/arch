@@ -1,4 +1,4 @@
-t#!/bin/bash
+#!/bin/bash
 # KJL install of Arch Linux (BIOS or UEFI install)
 # 
 # Based on https://www.linuxfordevices.com/tutorials/linux/how-to-install-arch-linux and
@@ -254,7 +254,7 @@ swapon /mnt/swapfile
 
 # get fastest mirror, replace with your own country code
 #reflector -c "SG" -p https --sort rate --save /mnt/etc/pacman.d/mirrorlist
-mv /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
+#mv /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
 
 # install necessary packages	
 #pacstrap /mnt base base-devel linux linux-headers linux-firmware nano dhcpcd iwd
@@ -272,6 +272,7 @@ cp pacman.conf /mnt/etc/pacman.conf
 
 #cp time.sh /mnt
 cp wine.sh /mnt
+cp install.sh /mnt
 
 # chroot into the new system and run the time.sh script
 # arch-chroot /mnt ./time.sh
