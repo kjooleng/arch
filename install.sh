@@ -70,6 +70,10 @@ read install_type
 echo "Install pipewire? (y/n)"
 read pipe_install
 
+# Install bluetooth?
+echo "Install bluetooth? (y/n)"
+read BT_install
+
 # choose to desktop environment
 echo "Choose desktop environment to install"
 echo "1) Cutefish"
@@ -438,6 +442,21 @@ arch-chroot /mnt pacman -S pulseaudio pulseaudio-alsa pavucontrol pulseaudio-blu
 *)  ;;
 esac
 
+# install bluetooth
+case $BT_install in
+
+[yY]* )
+# bluetooth install
+arch-chroot /mnt pacman -S bluez bluez-utils blueman
+arch-chroot /mnt systemctl enable bluetooth.service
+arch-chroot /mnt systemctl start bluetooth.service;;
+
+[nN]* )	;;
+# bluetooth no install
+
+*)  ;;
+esac
+
 # desktop environment install
 # do not install all/many
 # budgie and gnome conflict with each other
@@ -565,7 +584,7 @@ sudo arch-chroot /mnt pacman-key --recv-key 3056513887B78AEB
 #sudo pacman-key --lsign-key FBA220DFC880C036
 sudo arch-chroot /mnt pacman-key --lsign-key 3056513887B78AEB
 #sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-sudo arch-chroot /mnt pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+sudo arch-chroot /mnt pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' --noconfirm
 
 echo "  " >> /mnt/etc/pacman.conf
 echo "[chaotic-aur]" >> /mnt/etc/pacman.conf
@@ -573,6 +592,7 @@ echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /mnt/etc/pacman.conf
 
 arch-chroot /mnt pacman -Sy
 
+./others.sh
 exit
 
 ###### END  ######
