@@ -325,6 +325,7 @@ cp wine.sh /mnt
 cp disk.sh /mnt
 cp download.sh /mnt
 cp install.sh /mnt
+cp others.sh /mnt
 
 # chroot into the new system and run the time.sh script
 # arch-chroot /mnt ./time.sh
