@@ -429,9 +429,10 @@ case $pipe_install in
 
 [yY]* )
 # pipewire install
-arch-chroot /mnt pacman -S pipewire pipewire-alsa --noconfirm
-arch-chroot /mnt pacman -S wireplumber --noconfirm
-arch-chroot /mnt pacman -S pipewire-pulse --noconfirm
+#arch-chroot /mnt pacman -S pipewire pipewire-alsa --noconfirm
+arch-chroot /mnt pacman -S pipewire wireplumber --noconfirm
+#arch-chroot /mnt pacman -S wireplumber --noconfirm
+#arch-chroot /mnt pacman -S pipewire-pulse --noconfirm
 arch-chroot /mnt systemctl --global enable pipewire pipewire-pulse wireplumber --noconfirm ;;
 #systemctl --user --now enable pipewire pipewire-pulse wireplumber
 
