@@ -36,6 +36,7 @@ sudo arch-chroot /mnt systemctl enable tlp.service
 sudo arch-chroot /mnt systemctl enable NetworkManager-dispatcher.service
 sudo arch-chroot /mnt systemctl mask systemd-rfkill.service systemd-rfkill.socket
 
+reboot
 if [ -d /sys/firmware/efi/efivars/ ]; then #for uefi
 	echo "Shutting down....";
 	shutdown now
