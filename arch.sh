@@ -108,9 +108,9 @@ sudo pacman -S chaotic-aur/brave-bin --noconfirm
 
 
 #no need for running vm
-sudo pacman -S chaotic-aur/dropbox --noconfirm
-rm -rf ~/.dropbox-dist
-install -dm0 ~/.dropbox-dist
+#sudo pacman -S chaotic-aur/dropbox --noconfirm
+#rm -rf ~/.dropbox-dist
+#install -dm0 ~/.dropbox-dist
 sudo pacman -S chaotic-aur/youtubedl-gui --noconfirm
 #sudo pacman -S chaotic-aur/youplay --noconfirm
 #sudo pacman -S chaotic-aur/spotify --noconfirm
