@@ -68,7 +68,8 @@ sudo pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts ado
 sudo pacman -S fcitx5-im fcitx5-chinese-addons --noconfirm
 
 # other apps
-sudo pacman -S vlc gst-libav filezilla openvpn networkmanager-openvpn x11vnc parcellite --noconfirm
+#sudo pacman -S vlc gst-libav filezilla openvpn networkmanager-openvpn x11vnc parcellite --noconfirm
+sudo pacman -S vlc gst-libav filezilla openvpn networkmanager-openvpn x11vnc --noconfirm
 #sudo pacman -S vlc gst-libav openvpn networkmanager-openvpn x11vnc parcellite --noconfirm
 #sudo pacman -S fuseiso nemo filemanager-actions cdrtools alacarte  --noconfirm
 #sudo pacman -S fuseiso nemo gnome-disk-utility cdrtools alacarte  --noconfirm
