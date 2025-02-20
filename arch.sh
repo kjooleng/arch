@@ -10,8 +10,9 @@ fi
 #su
 
 #sudo pacman -S reflector rsync curl --noconfirm
-sudo pacman -S reflector rsync curl --noconfirm
+sudo pacman -S reflector --noconfirm
 reflector -c "SG" -p https --sort rate --save /etc/pacman.d/mirrorlist
+sudo nano /etc/pacman.d/mirrorlist
 
 # set swap size
 echo Enter desired swap file size in MiB
@@ -78,16 +79,18 @@ sudo pacman -S fuseiso nemo gnome-clocks gnome-disk-utility cdrtools alacarte  -
 #systemctl enable vboxservice
 
 #bluetooth
-sudo pacman -S bluez bluez-utils blueman
-sudo systemctl enable bluetooth.service
-sudo systemctl start bluetooth.service
+#sudo pacman -S bluez bluez-utils blueman
+#sudo systemctl enable bluetooth.service
+#sudo systemctl start bluetooth.service
 
-winetricks corefonts cjkfonts dxvk vkd3d jet40 mdac28 --noconfirm
-winetricks dotnet35 dotnet40 --noconfirm
+#winetricks corefonts cjkfonts dxvk vkd3d jet40 mdac28 --noconfirm
+#winetricks corefonts cjkfonts dxvk vkd3d --noconfirm
+#winetricks dotnet35 dotnet40 --noconfirm
 
 # other customisation
 sudo pacman -S chaotic-aur/yay --noconfirm
-sudo pacman -S chaotic-aur/trizen --noconfirm
+#sudo pacman -S chaotic-aur/trizen --noconfirm
+sudo pacman -S chaotic-aur/appimagelauncher --noconfirm
 sudo pacman -S chaotic-aur/p7zip-gui --noconfirm
 sudo pacman -S chaotic-aur/anydesk --noconfirm
 #sudo pacman -S chaotic-aur/firedragon --noconfirm
@@ -98,7 +101,7 @@ sudo pacman -S chaotic-aur/anydesk --noconfirm
 #sudo pacman -S chaotic-aur/mercury-browser-avx-bin --noconfirm
 #sudo pacman -S chaotic-aur/waterfox-bin --noconfirm
 sudo pacman -S chaotic-aur/microsoft-edge-stable-bin --noconfirm
-trizen -S appimagelauncher --noconfirm
+#trizen -S appimagelauncher --noconfirm
 #sudo pacman -S chaotic-aur/pamac-aur --noconfirm
 sudo pacman -S chaotic-aur/pamac --noconfirm
 sudo pacman -S chaotic-aur/brave-bin --noconfirm
@@ -131,12 +134,8 @@ sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 
 yay -S slimbookbattery --noconfirm
 
-yay -S knock-bin --noconfirm
+#yay -S knock-bin --noconfirm
 
-yay -S authy-desktop-win32-bin
-
-
-
-
+#yay -S authy-desktop-win32-bin
 #exit
 
