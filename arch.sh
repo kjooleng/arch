@@ -34,9 +34,9 @@ echo "/swapfile none swap defaults 0 0" >> /etc/fstab
 
 
 #Chaotic-AUR
-sudo pacman-key --recv-key 3056513887B78AEB 
-sudo pacman-key --lsign-key 3056513887B78AEB
-sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'  --noconfirm
+#sudo pacman-key --recv-key 3056513887B78AEB 
+#sudo pacman-key --lsign-key 3056513887B78AEB
+#sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'  --noconfirm
 
 # configure pacman.conf
 #cat <<EOF >> /etc/pacman.conf
@@ -44,11 +44,11 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.ta
 #Include = /etc/pacman.d/chaotic-mirrorlist
 #EOF
 
-echo "  " >> /etc/pacman.conf
-echo "[chaotic-aur]" >> /etc/pacman.conf
-echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
+#echo "  " >> /etc/pacman.conf
+#echo "[chaotic-aur]" >> /etc/pacman.conf
+#echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
 
-sudo pacman -Syu
+#sudo pacman -Syu
 
 # Uncomment # to include chinese for locale generation
 sudo sed -i 's/^# *\(zh_\)/\1/' /etc/locale.gen
