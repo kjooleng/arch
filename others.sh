@@ -39,10 +39,11 @@ sudo arch-chroot /mnt systemctl mask systemd-rfkill.service systemd-rfkill.socke
 reboot
 if [ -d /sys/firmware/efi/efivars/ ]; then #for uefi
 	echo "Shutting down....";
-	shutdown now
+	#shutdown now
+ 	reboot
 	
 else	#for bios
 	echo "Rebooting....";	
-    reboot
+    	reboot
 
 fi
