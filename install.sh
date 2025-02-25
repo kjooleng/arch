@@ -293,7 +293,7 @@ arch-chroot /mnt hwclock --systohc
 sudo sed -i 's/^# *\(zh_\)/\1/' /mnt/etc/locale.gen
 
 arch-chroot /mnt locale-gen
-echo LANG=en_US.UTF-8 > /mnt/etc/locale.conf
+echo "LANG=en_US.UTF-8" > /mnt/etc/locale.conf
 
 clear
 
