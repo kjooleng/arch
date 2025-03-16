@@ -13,6 +13,16 @@ fi
 # check if internet connection exists
 ping -q -c 1 archlinux.org >/dev/null || { echo "No Internet Connection!; "exit 1; }
 
+pacman -Sy
+
+#check if reflector is installed
+if pacman -Qi reflector > /dev/null ; then
+  echo "The package reflector is installed"
+else
+  echo "The package reflector is not installed"
+  pacman -S reflector --noconfirm
+fi
+
 # get fastest mirror, replace with your own country code
 reflector -c "SG" -p https --sort rate --save /etc/pacman.d/mirrorlist
 nano /etc/pacman.d/mirrorlist
