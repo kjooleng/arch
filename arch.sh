@@ -9,10 +9,22 @@ fi
 
 #su
 
-#sudo pacman -S reflector rsync curl --noconfirm
-sudo pacman -S reflector --noconfirm
+#check if reflector is installed
+if sudo pacman -Qi reflector > /dev/null ; then
+  echo "The package reflector is installed"
+else
+  echo "The package reflector is not installed"
+  sudo pacman -S reflector --noconfirm
+fi
+
+# get fastest mirror, replace with your own country code
 reflector -c "SG" -p https --sort rate --save /etc/pacman.d/mirrorlist
 sudo nano /etc/pacman.d/mirrorlist
+
+#sudo pacman -S reflector rsync curl --noconfirm
+#sudo pacman -S reflector --noconfirm
+#reflector -c "SG" -p https --sort rate --save /etc/pacman.d/mirrorlist
+#sudo nano /etc/pacman.d/mirrorlist
 
 # set swap size
 echo Enter desired swap file size in MiB
