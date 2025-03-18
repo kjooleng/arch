@@ -7,6 +7,8 @@ curl -o disk.sh -SL https://bit.ly/44SFwPC
 #curl -o disk.sh -SL https://t.ly/bpO3n
 #curl -o disk.sh -SL https://shorturl.at/cMTgd
 curl -o others.sh -SL https://bit.ly/43456Cu
+curl -o arch.sh -SL https://bit.ly/42biuUq
+curl -o aur2.sh -SL https://bit.ly/4hdL0JD
 
 #curl -o locale.gen -SL https://bit.ly/46pMfBd
 #curl -o pacman.conf -SL https://bit.ly/44iJTCR
