@@ -9,7 +9,7 @@ curl -o disk.sh -SL https://bit.ly/44SFwPC
 curl -o others.sh -SL https://bit.ly/43456Cu
 
 #curl -o locale.gen -SL https://bit.ly/46pMfBd
-curl -o pacman.conf -SL https://bit.ly/44iJTCR
+#curl -o pacman.conf -SL https://bit.ly/44iJTCR
 #curl -o sudoers -SL https://bit.ly/3NxuE1v
 
 #for archbang only
