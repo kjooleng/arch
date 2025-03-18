@@ -288,6 +288,8 @@ echo "/swapfile none swap defaults 0 0" >> /mnt/etc/fstab
 cp wine.sh /mnt
 cp install.sh /mnt
 cp others.sh /mnt
+cp arch.sh /mnt
+cp aur2.sh /mnt
 
 # chroot into the new system and run the time.sh script
 # arch-chroot /mnt ./time.sh
