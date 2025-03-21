@@ -13,8 +13,8 @@ fi
 # check if internet connection exists
 ping -q -c 1 archlinux.org >/dev/null || { echo "No Internet Connection!; "exit 1; }
 
-set -o pipefail
-trap 's=$?; echo "$0: Error on line "$LINENO": $BASH_COMMAND"; exit $s' ERR
+#set -o pipefail
+#trap 's=$?; echo "$0: Error on line "$LINENO": $BASH_COMMAND"; exit $s' ERR
 
 pacman -Sy
 
@@ -273,8 +273,8 @@ swapon /mnt/swapfile
 #reflector -c "SG" -p https --sort rate --save /mnt/etc/pacman.d/mirrorlist
 #mv /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
 
-exec 1>>(tee "/mnt/stdout.log")
-exec 2>>(tee "/mnt/stderr.log")
+#exec 1>>(tee "/mnt/stdout.log")
+#exec 2>>(tee "/mnt/stderr.log")
 
 # install necessary packages	
 #pacstrap /mnt base base-devel linux linux-headers linux-firmware nano dhcpcd iwd
