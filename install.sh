@@ -13,7 +13,7 @@ fi
 # check if internet connection exists
 ping -q -c 1 archlinux.org >/dev/null || { echo "No Internet Connection!; "exit 1; }
 
-set -uo pipefail
+set -o pipefail
 trap 's=$?; echo "$0: Error on line "$LINENO": $BASH_COMMAND"; exit $s' ERR
 
 pacman -Sy
