@@ -32,7 +32,7 @@ nano wine.sh
 
 #nano locale.gen
 
-nano pacman.conf
+#nano pacman.conf
 nano disk.sh
 
 #nano sudoers
