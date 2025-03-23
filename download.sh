@@ -11,7 +11,7 @@ curl -o arch.sh -SL https://bit.ly/42biuUq
 curl -o aur2.sh -SL https://bit.ly/4hdL0JD
 
 #curl -o locale.gen -SL https://bit.ly/46pMfBd
-#curl -o pacman.conf -SL https://bit.ly/44iJTCR
+curl -o pacman.conf -SL https://bit.ly/44iJTCR
 #curl -o sudoers -SL https://bit.ly/3NxuE1v
 
 #for archbang only
@@ -32,7 +32,7 @@ nano wine.sh
 
 #nano locale.gen
 
-#nano pacman.conf
+nano pacman.conf
 nano disk.sh
 
 #nano sudoers
