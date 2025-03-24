@@ -559,7 +559,7 @@ case $desktop_install in
 [3]* )
 # mate install
 #arch-chroot /mnt pacman -S firefox vlc gst-libav filezilla networkmanager openvpn networkmanager-openvpn nm-connection-editor network-manager-applet cdrtools x11vnc parcellite --noconfirm;;
-arch-chroot /mnt pacman -S firefox vlc gst-libav filezilla networkmanager openvpn networkmanager-openvpn nm-connection-editor network-manager-applet cdrtools x11vnc --noconfirm;;
+arch-chroot /mnt pacman -S samba firefox vlc gst-libav filezilla networkmanager openvpn networkmanager-openvpn nm-connection-editor network-manager-applet cdrtools x11vnc --noconfirm;;
 
 # others
 *) 
@@ -567,7 +567,7 @@ arch-chroot /mnt pacman -S firefox vlc gst-libav filezilla networkmanager openvp
 #arch-chroot /mnt pacman -S firefox vlc gst-libav filezilla networkmanager openvpn networkmanager-openvpn nm-connection-editor network-manager-applet dolphin cdemu-daemon cdemu-client alacarte x11vnc parcellite --noconfirm
 arch-chroot /mnt pacman -S firefox vlc gst-libav filezilla networkmanager openvpn networkmanager-openvpn nm-connection-editor network-manager-applet --noconfirm
 #arch-chroot /mnt pacman -S fuseiso nemo filemanager-actions cdrtools alacarte x11vnc parcellite --noconfirm;;
-arch-chroot /mnt pacman -S fuseiso nemo gnome-clocks gnome-disk-utility cdrtools alacarte x11vnc glibc-locales --noconfirm;;
+arch-chroot /mnt pacman -S samba fuseiso nemo gnome-clocks gnome-disk-utility cdrtools alacarte x11vnc glibc-locales --noconfirm;;
 esac
 
 
