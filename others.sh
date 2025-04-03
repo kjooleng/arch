@@ -1,12 +1,12 @@
 #!/bin/bash
 
 arch-chroot /mnt pacman -S chaotic-aur/yay --noconfirm
-arch-chroot /mnt yay -S chaotic-aur/pamac --noconfirm
-arch-chroot /mnt yay -S chaotic-aur/appimagelauncher --noconfirm
-arch-chroot /mnt yay -S chaotic-aur/p7zip-gui --noconfirm
-arch-chroot /mnt yay -S chaotic-aur/anydesk --noconfirm
-arch-chroot /mnt yay -S chaotic-aur/microsoft-edge-stable-bin --noconfirm
-arch-chroot /mnt yay -S chaotic-aur/brave-bin --noconfirm
+arch-chroot /mnt pacman -S chaotic-aur/pamac --noconfirm
+arch-chroot /mnt pacman -S chaotic-aur/appimagelauncher --noconfirm
+arch-chroot /mnt pacman -S chaotic-aur/p7zip-gui --noconfirm
+arch-chroot /mnt pacman -S chaotic-aur/anydesk --noconfirm
+arch-chroot /mnt pacman -S chaotic-aur/microsoft-edge-stable-bin --noconfirm
+arch-chroot /mnt pacman -S chaotic-aur/brave-bin --noconfirm
 #arch-chroot /mnt yay -S chaotic-aur/firedragon --noconfirm
 #arch-chroot /mnt yay -S chaotic-aur/librewolf --noconfirm
 #arch-chroot /mnt yay -S chaotic-aur/icecat --noconfirm
@@ -20,13 +20,13 @@ arch-chroot /mnt yay -S chaotic-aur/brave-bin --noconfirm
 #sudo pacman -S chaotic-aur/youplay --noconfirm
 #sudo pacman -S chaotic-aur/spotify --noconfirm
 
-arch-chroot /mnt yay -S chaotic-aur/video-downloader --noconfirm
-arch-chroot /mnt yay -S chaotic-aur/xorgxrdp --noconfirm
+arch-chroot /mnt pacman -S chaotic-aur/video-downloader --noconfirm
+arch-chroot /mnt pacman -S chaotic-aur/xorgxrdp --noconfirm
 arch-chroot /mnt pacman -S bitwarden --noconfirm
 arch-chroot /mnt pacman -S clipgrab --noconfirm
 
 #install firewall
-arch-chroot /mnt yay -S firewalld --noconfirm
+arch-chroot /mnt pacman -S firewalld --noconfirm
 sudo arch-chroot /mnt systemctl enable firewalld
 sudo arch-chroot /mnt systemctl start firewalld
 
@@ -36,6 +36,7 @@ sudo arch-chroot /mnt systemctl enable tlp.service
 sudo arch-chroot /mnt systemctl enable NetworkManager-dispatcher.service
 sudo arch-chroot /mnt systemctl mask systemd-rfkill.service systemd-rfkill.socket
 
+exit
 reboot
 if [ -d /sys/firmware/efi/efivars/ ]; then #for uefi
 	echo "Shutting down....";
