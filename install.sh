@@ -424,7 +424,7 @@ case $install_type in
 [1]* )
 # Intel, AMD or Nvidia
 arch-chroot /mnt pacman -S intel-media-driver libva-intel-driver libva-mesa-driver vulkan-intel vulkan-radeon --noconfirm
-arch-chroot /mnt pacman -S xf86-video-amdgpu xf86-video-ati xf86-video-nouveau xf86-video-vmware --noconfirm
+arch-chroot /mnt pacman -S xf86-video-amdgpu xf86-video-ati xf86-video-nouveau --noconfirm
 arch-chroot /mnt pacman -S xf86-video-intel mesa virtualbox-guest-utils --noconfirm ;;
 
 [2]* )
