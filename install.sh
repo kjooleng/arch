@@ -287,7 +287,7 @@ echo "/swapfile none swap defaults 0 0" >> /mnt/etc/fstab
 
 # copy some config files to /mnt
 cp pacman.conf /mnt/etc/pacman.conf
-#cp locale.gen /mnt/etc/locale.gen
+cp locale.gen /mnt/etc/locale.gen
 #cp sudoers /mnt/etc/sudoers
 
 #cp time.sh /mnt
@@ -308,7 +308,7 @@ arch-chroot /mnt hwclock --systohc
 # nano /etc/locale.gen
 
 # Uncomment # to include chinese for locale generation
-sudo sed -i 's/^# *\(zh_\)/\1/' /mnt/etc/locale.gen
+#sudo sed -i 's/^# *\(zh_\)/\1/' /mnt/etc/locale.gen
 
 arch-chroot /mnt locale-gen
 echo "LANG=en_US.UTF-8" > /mnt/etc/locale.conf
@@ -627,3 +627,4 @@ else	#for bios
     reboot
 
 fi
+
