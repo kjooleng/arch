@@ -10,7 +10,7 @@ curl -o others.sh -SL https://bit.ly/43456Cu
 curl -o arch.sh -SL https://bit.ly/42biuUq
 curl -o aur2.sh -SL https://bit.ly/4hdL0JD
 
-#curl -o locale.gen -SL https://bit.ly/46pMfBd
+curl -o locale.gen -SL https://bit.ly/46pMfBd
 curl -o pacman.conf -SL https://bit.ly/44iJTCR
 #curl -o sudoers -SL https://bit.ly/3NxuE1v
 
@@ -30,7 +30,7 @@ nano others.sh
 
 nano wine.sh
 
-#nano locale.gen
+nano locale.gen
 
 nano pacman.conf
 nano disk.sh
@@ -319,7 +319,7 @@ echo "/swapfile none swap defaults 0 0" >> /mnt/etc/fstab
 
 # copy some config files to /mnt
 cp pacman.conf /mnt/etc/pacman.conf
-#cp locale.gen /mnt/etc/locale.gen
+cp locale.gen /mnt/etc/locale.gen
 #cp sudoers /mnt/etc/sudoers
 
 #cp time.sh /mnt
@@ -337,10 +337,10 @@ arch-chroot /mnt ln -sf /usr/share/zoneinfo/Asia/Singapore /etc/localtime
 arch-chroot /mnt hwclock --systohc
 
 # set settings related to locale
-# nano /etc/locale.gen
+ nano /etc/locale.gen
 
 # Uncomment # to include chinese for locale generation
-sudo sed -i 's/^# *\(zh_\)/\1/' /mnt/etc/locale.gen
+#sudo sed -i 's/^# *\(zh_\)/\1/' /mnt/etc/locale.gen
 
 arch-chroot /mnt locale-gen
 echo LANG=en_US.UTF-8 > /mnt/etc/locale.conf
