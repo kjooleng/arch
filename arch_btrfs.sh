@@ -47,7 +47,10 @@ swapon /swap/swapfile
 #EOF
 
 echo "  " >> /etc/fstab
-echo "/swapfile none swap defaults 0 0" >> /etc/fstab
+#other formats
+#echo "/swapfile none swap defaults 0 0" >> /etc/fstab
+#btrfs
+echo "/swap/swapfile none swap defaults 0 0" >> /etc/fstab
 
 
 #Chaotic-AUR
