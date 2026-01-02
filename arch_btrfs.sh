@@ -140,6 +140,7 @@ sudo pacman -S chaotic-aur/xorgxrdp --noconfirm
 #sudo pacman -S chaotic-aur/authy --noconfirm
 sudo pacman -S bitwarden --noconfirm
 sudo pacman -S clipgrab --noconfirm
+yay -S remmina freerdp --noconfirm
 #sudo pacman -S reflector rsync curl --noconfirm
 
 #install firewall
